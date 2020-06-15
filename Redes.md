@@ -20,20 +20,24 @@ Router(config)#       (indicador de modo conf glob)
 
 ##SWITCH
 Comando para mostrar las direcciones mac conocidas para el switch
+```
 Switch# show mac-address-table 
+```
 
 Configuracion de nombre
+```
 Switch# enable 
 Switch# configure terminal 
 Switch(config)# hostname Switch_UPC 
+```
 
 Creación de Vlans 
-'''
+```
 Switch# configure terminal 
 Switch(config)# vlan {#numero_de_Vlan} 
 Switch(config)# name {"Nombre_de_Vlan"} 
 Switch(config-if)# exit 
-'''
+```
 
 Asignacion de interfaces a las Vlan 
 Switch# configure terminal 
