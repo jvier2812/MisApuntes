@@ -1,5 +1,0 @@
-# MisApuntes
-
-'''
-chupetin
-'''
