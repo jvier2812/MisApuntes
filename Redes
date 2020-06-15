@@ -28,11 +28,12 @@ Switch# configure terminal
 Switch(config)# hostname Switch_UPC 
 
 Creación de Vlans 
+'''
 Switch# configure terminal 
 Switch(config)# vlan {#numero_de_Vlan} 
 Switch(config)# name {"Nombre_de_Vlan"} 
 Switch(config-if)# exit 
-
+'''
 
 Asignacion de interfaces a las Vlan 
 Switch# configure terminal 
