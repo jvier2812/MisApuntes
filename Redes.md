@@ -1,17 +1,19 @@
-MODOS EN ROUTER Y SWITCH
+## MODOS EN ROUTER Y SWITCH
 |Modo EXEC usuario   |Modo EXEC privilegiado |Modo de configuracion global|Otros modos de configuracion global  |
 |---|---|---|---|
 | .Examen limitado del router .Acceso remoto | * Examen detallado del router y acceso remoto * Depuracion y prueba -Manipulacion de archivos   | -Comandos de configuracion global | -Otros modos de configuracion global| 
 | Switch>            | Switch#               | Switch(config)#      | Switch(config-)#      |
 | Router>            | Router#               | Router(config)#      | Router(config-)#      |
 
-Router>               (indicador modo exec usuario)
-Router>enable  
-Router#               (indicador modo privilegiado)
-Router#configure terminal
-Router(config)#       (indicador de modo conf glob)
+|Modo en router||
+|--|--|
+| 1.Indicador de modo usuario|Router>|
+| 2.Comando enable|Router>enable|
+| 3.Indicador modo privilegiado|Router#|
+| 4.Comando configure terminal|Router#configure terminal|
+| 5.Indicador de modo configuracion global|Router(config)#|
 
-# SWITCH
+## SWITCH
 
 ### Comando para mostrar las direcciones mac conocidas para el switch
 ```
