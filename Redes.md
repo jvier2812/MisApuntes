@@ -171,7 +171,6 @@ Router(config-if)#ip access-group [#lista][in|out]
 in|out: especifica si será un filtro de entrada o de salida
 
 #### Como eliminar las listas de acceso
-
 Desde el modo interfaz donde se aplico la lista:
 ```
 Router(config-if)#no ip access-group [#lista]
@@ -179,4 +178,8 @@ Router(config-if)#no ip access-group [#lista]
 Desde el modo global elimine la ACL
 ```
 router(config)#no access-list [#lista]
+```
+#### Lista de access-list
+```
+Router#show access-list
 ```
