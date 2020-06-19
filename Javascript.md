@@ -138,3 +138,35 @@ for (x in person)//{
 }
 document.write(txt); //output: javier / ramos / j_vier
 ```
+
+
+### Functions
+BASIC
+```
+function MYFUNCTION(PARAMETERS){
+//CODE
+  return RETURNVALUE; 
+}
+```
+
+### Javascript Events 
+```
+//mouse clicks
+onclick="<!--SCRIPT-->"
+//mouse overs
+onmouseover=""
+//mouse outs
+onmouseout=""
+//key down
+
+//document load
+
+```
+
+### Examples
+#### Code to change the bg color when the page is refreshed 
+```
+var bgcolor=new Array("#FFFFFF","#000000","#FF0000","#00FF00","#0000FF");
+document.body.style.background=bgcolor[Math.floor(Math.random()*bgcolor.length)];
+```
+
