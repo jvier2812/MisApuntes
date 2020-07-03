@@ -79,6 +79,70 @@ Switch# delete flash:vlan.dat
 Switch#erase startup-config
 Switch#reload
 ```
+## INTERVLANS
+Inter-VLAN Routing (Router on a stick) nos brinda la facilidad de utilizar solo una interfaz para enrrutar los paquetes de varias VLANs que viajan a través del switch conectado a esa interfaz, es decir, podemos configurar varias IP de diferentes redes a varias interfaces virtuales (sub-interfaces) alojadas en una sola interfaz física 
+
+### ¿Cómo hacemos intervlans? 
+
+#### En router
+```
+Router(config)#interface [id_interfaz].[id_subinterfaz]
+```
+Luego encender la interfaz (no shutdown)
+
+Ejemplo 
+```
+R1(config)#interface fastEthernet 0/0.10 
+R1(config-subif)#encapsulation dot1Q 10 
+```
+
+Configuracion de subinterfaz
+```
+R1(config)#interface fastEthernet 0/0.10 
+R1(config-subif)#encapsulation dot1Q 10 
+R1(config-subif)#ip address 192.168.10.1 255.255.255.0 
+R1(config-subif)#exit 
+```
+
+#### En switch troncal 
+```
+S1(config)#interface fastEthernet [interfaz_que_va_al_router]
+S1(config-if)#switchport mode trunk 
+S1(config-if)#switchport trunk allowed vlan all 
+```
+
+NOTA: en todas las PC de la red, debemos configurar como default gateway la IP configurada en la sub-interface correspondiente a su red. 
+
+### ROUTER RIP
+
+#### Configuracion puerto serial 
+```
+Router_UPC#configure terminal 
+Router_UPC(config)#interface serial 0/0/0 
+Router_UPC(config-if)#ip address 192.168.2.1 255.255.255.0 
+Router_UPC(config-if)#clock rate 64000 
+Router_UPC(config-if)#no shutdown 
+Router_UPC(config-if)#exit 
+```
+
+#### Configuracion router rip
+```
+Router_UPC#configure terminal 
+Router_UPC(config)#Router RIP 
+Router_UPC(config-router)#Network 192.168.1.0 
+Router_UPC(config-router)#Network 192.168.2.0 
+Router_UPC(config-router)#exit  
+```
+
+#### Configuracion router rip v2
+```
+Router(config)#router rip 
+Router(config-router)#ver 2 
+Router(config-router)#network 192.168.0.0 
+Router(config-router)#network 200.200.1.0 
+Router(config-router)# no auto-summary    
+```
+
 
 ### Rutas estáticas y sumarización
 
