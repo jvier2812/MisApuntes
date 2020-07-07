@@ -189,6 +189,8 @@ Ejemplos:
 (config)#access-list 1 permit host 10.5.3.37
 (config)#access-list 1 permit any
 ```
+## ACL EXTENDIDA
+Una access-list extendida, a diferencia de la estándar, tiene en cuenta la dirección ip de origen, ip destino y el puerto. 
 
 #### Crear una ACL extendida
 ```
@@ -214,9 +216,9 @@ Log: (opcional) Envía un mensaje de registro a la consola a un servidor syslog 
 |23| Telnet|
 |25| SMTP|
 |69| TFTP|
-|53| DNS|
-|80| HTTP|
-|443| HTTPS|
+|53 UDP| DNS|
+|80 TCP| HTTP|
+|443 TCP| HTTPS|
 |631| IPP|
 
 
