@@ -82,8 +82,8 @@ var personage=person.age; // assign and access to an obect type
 
 ```
 
-####string
-```
+## strings
+```javascript 
 //use backslash to use special character, in this case, the quotes
 document.write="we are \"los chupetines\" gaaaa";
 
@@ -98,6 +98,44 @@ document.write=txt.length;
 array = ["ele1", "ele2", "ele3"]
 document.write=array1.toString(); //output: ele1, ele2, ele3 
 document.write=array.join(" * "); //output: ele1 * ele2 * ele3
+```
+
+#### manipulatin strings
+```javascript
+
+const originalWord = "Bora-Bora";
+const lowercaseWord = originalWord.toLowerCase();
+console.log(lowercaseWord); // "bora-bora"
+const uppercaseWord = originalWord.toUpperCase();
+console.log(uppercaseWord); // "BORA-BORA"
+
+//turning a string into an array
+const name = "Sarah";
+const nameArray = Array.from(name);
+nameArray.forEach(letter => {
+  console.log(letter);
+});
+
+//breaking a string into parts 
+const monthList = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+const months = monthList.split(",");
+console.log(months[0]);  // "Jan"
+console.log(months[11]); // "Dec"
+```
+
+#### searching into a string 
+```javascript
+const song = "Honky Tonk Women";
+console.log(song.indexOf("onk")); // 1
+console.log(song.indexOf("Onk")); // -1 because of case mismatch
+
+console.log(song.startsWith("Honk")); // true
+console.log(song.startsWith("honk")); // false
+console.log(song.startsWith("Tonk")); // false
+
+console.log(song.endsWith("men")); // true
+console.log(song.endsWith("Men")); // false
+console.log(song.endsWith("Tonk")); // false
 ```
 
 #### number
@@ -149,6 +187,32 @@ function MYFUNCTION(PARAMETERS){
 }
 ```
 
+#### anonymous functions
+old
+```javascript
+// Assignment of an anonymous function to the myFunc variable
+const myFunc = function(param1, param2, ...) {
+  // Statements using param1, param2, ...
+};
+
+// Anonymous function call
+// param1 value is set to arg1, param2 to arg2, ...
+myFunc(arg1, arg2, ...);
+```
+fat arrow function
+```javascript
+const hello = (name) => {
+  const message = `Hello, ${name}!`;
+  return message;
+};
+console.log(hello("William")); // "Hello, William!"
+```
+```javascript
+// Minimalist to the max
+const hello = name => `Hello, ${name}!`;
+
+console.log(hello("Kate")); // "Hello, Kate!"
+```
 ### Javascript Events 
 ```
 //mouse clicks
@@ -170,3 +234,127 @@ var bgcolor=new Array("#FFFFFF","#000000","#FF0000","#00FF00","#0000FF");
 document.body.style.background=bgcolor[Math.floor(Math.random()*bgcolor.length)];
 ```
 
+
+
+## Objects 
+
+#### Literal object 
+Your can add methods (functions) 
+```javascript
+const pen = {
+  type: "ballpoint",
+  color: "blue",
+  brand: "Bic",
+  penFunction(){
+  }
+};
+```
+
+
+## Arrays
+
+
+```javascript
+const movies = ["The Wolf of Wall Street", "Zootopia", "Babysitting"];
+const emptyArray = []; // Create an empty array
+```
+
+#### iterating into an array 
+
+```javascript
+//declare the array
+const movies = ["The Wolf of Wall Street", "Zootopia", "Babysitting"];
+
+
+//using the for loop
+for (let i = 0; i < movies.length; i++) {
+  console.log(movies[i]);
+}
+
+//using the arrow function
+movies.forEach(movie => { console.log(movie);}
+);
+
+//using for-of loop
+for (const movie of movies) { console.log(movie);
+}
+```
+#### updating an array
+
+```javascript
+const movies = ["The Wolf of Wall Street", "Zootopia", "Babysitting"];
+movies.push("Ghostbusters"); //movies[3] is Ghostbusters
+movies.unshift("Titanic"); //movies[0] is Titanic
+movies.pop() // Remove the last array element
+movies.splice(0, 1); // Remove 1 element starting at index 0
+```
+
+
+## Javascript Classes
+
+syntaxis
+```javascript
+class MyClass {
+  constructor(param1, param2, ...) {
+    this.property1 = param1;
+    this.property2 = param2;
+    // ...
+  }
+  method1(/* ... */) {
+    // ...
+  }
+  method2(/* ... */) {
+    // ...
+  }
+  // ...
+}
+
+const myObject = new MyClass(arg1, arg2, ...);
+myObject.method1(/* ... */);
+// 
+
+```
+example
+```javascript
+
+class Character {
+  constructor(name, health, strength) {
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+    this.xp = 0; // XP is always zero for new characters
+  }
+  // Return the character description
+  describe() {
+    return `${this.name} has ${this.health} health points, ${this
+      .strength} as strength and ${this.xp} XP points`;
+  }
+}
+
+//using classes
+const aurora = new Character("Aurora", 150, 25);
+const glacius = new Character("Glacius", 130, 30); 
+```
+
+#### objects and prototypes 
+```javascript 
+const anObject = {
+  myProp: 2
+};
+
+// Create anotherObject using anObject as a prototype
+const anotherObject = Object.create(anObject);
+
+// Create yetAnotherObject using anotherObject as a prototype
+const yetAnotherObject = Object.create(anotherObject);
+
+// myProp is found in yetAnotherObject's prototype chain (in anObject)
+console.log(yetAnotherObject.myProp); // 2
+
+// myOtherProp can't be found in yetAnotherObject's prototype chain
+console.log(yetAnotherObject.myOtherProp); // undefined
+```
+
+
+ 
+ 
