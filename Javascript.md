@@ -354,7 +354,38 @@ console.log(yetAnotherObject.myProp); // 2
 // myOtherProp can't be found in yetAnotherObject's prototype chain
 console.log(yetAnotherObject.myOtherProp); // undefined
 ```
+Functional programming is about writing programs by combining functions expressing what the program should do, rather than how to do it.
 
+## Array Operations 
+
+#### The map() Method
+```javascript 
+const numbers = [1, 5, 10, 15];
+// The associated function multiply each array number by 2
+const doubles = numbers.map(x => x * 2);
+console.log(numbers); // [1, 5, 10, 15] (no change)
+console.log(doubles); // [2, 10, 20, 30]
+```
+
+#### The filter() Method
+```javascript 
+const numbers = [1, 5, 10, 15];
+// Keep only the number greater than or equal to 10
+const bigOnes = numbers.filter(x => x >= 10);
+
+console.log(numbers); // [1, 5, 10, 15] (no change)
+console.log(bigOnes); // [10, 15]
+```
+
+#### The reduce() Method
+```javascript 
+const numbers = [1, 5, 10, 15];
+// Compute the sum of array elements
+const sum = numbers.reduce((acc, value) => acc + value, 0);
+
+console.log(numbers); // [1, 5, 10, 15] (no change)
+console.log(sum);     // 31
+```
 
  
  
