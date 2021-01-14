@@ -1,11 +1,5 @@
 let wr = (msg = '--------') => console.log(msg)
 
-/* Factorial exercise solution */
-const factorial = n => {
-    if (n < 2) return 1
-    return n * factorial(n - 1)
-}
-
 const bubbleSort = nums => {
     for (let i = 1; i <= nums.length; i++) {
         let swaps = false

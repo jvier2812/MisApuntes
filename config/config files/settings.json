@@ -1,0 +1,72 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+  "copyOnSelect": false,
+  "copyFormatting": false,
+  "profiles": {
+    "defaults": {},
+    "list": [
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Powershell",
+        "commandline": "powershell.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "Command Prompt",
+        "commandline": "cmd.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+        "hidden": false,
+        "name": "Ubuntu-18.04",
+        "source": "Windows.Terminal.Wsl"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl"
+      }
+    ]
+  },
+
+  "schemes": [],
+
+  "actions": [
+    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+    { "command": "paste", "keys": "ctrl+v" },
+    { "command": "find", "keys": "ctrl+shift+f" },
+    { "command": "splitPane", "keys": "alt+shift+s" },
+    { "command": "closePane", "keys": "alt+shift+d" },
+    { "command": "toggleAlwaysOnTop" },
+    { "command": "closeTab", "keys": "ctrl+shift+d" },
+    { "command": "newTab", "keys": "ctrl+shift+t" },
+    {
+      "command": { "action": "moveFocus", "direction": "down" },
+      "keys": "alt+j"
+    },
+    {
+      "command": { "action": "moveFocus", "direction": "left" },
+      "keys": "alt+h"
+    },
+    {
+      "command": { "action": "moveFocus", "direction": "right" },
+      "keys": "alt+l"
+    },
+    {
+      "command": { "action": "moveFocus", "direction": "up" },
+      "keys": "alt+k"
+    },
+    { "command": "scrollUp", "keys": "ctrl+shift+k" },
+    { "command": "scrollDown", "keys": "ctrl+shift+j" }
+  ]
+}
