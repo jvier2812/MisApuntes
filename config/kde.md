@@ -1,3 +1,14 @@
+### IF GNOME
+
+```bash
+sudo apt install kde-plasma-desktop
+sudo apt install lightdm
+reboot
+```
+
+
+
+
 
 PANEL widgets 
 1. launchpad plasma
@@ -9,5 +20,7 @@ PANEL widgets
 
 4. spacer
 5. event calendar 
+
+
 
 
