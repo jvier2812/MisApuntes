@@ -18,6 +18,12 @@ sudo apt install
     mongodb
 ```
 
+##### IF POP_OS
+```
+sudo apt install gnome-tweaks
+```
+
+
 #### OHMYZSH
 
 ```
