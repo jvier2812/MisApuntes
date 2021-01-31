@@ -1,0 +1,38 @@
+1611036166326	geckodriver	INFO	Listening on 127.0.0.1:50507
+1611036167314	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSTavTJ"
+Gtk-Message: 01:02:47.356: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 01:02:49.281: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 01:02:49.565: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 01:02:51.133: Failed to load module "appmenu-gtk-module"
+1611036171232	Marionette	INFO	Listening on port 43951
+1611036171356	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611036177882	Marionette	INFO	Stopped listening on port 43951
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1611105363388	geckodriver	INFO	Listening on 127.0.0.1:47389
+1611105364382	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1yRRTE"
+Gtk-Message: 20:16:04.589: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:16:06.734: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:16:07.007: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 20:16:08.293: Failed to load module "appmenu-gtk-module"
+1611105368356	Marionette	INFO	Listening on port 37601
+1611105368423	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1611105472871	geckodriver	INFO	Listening on 127.0.0.1:50159
+1611105472876	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0U02YD"
+Gtk-Message: 20:17:52.896: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:17:54.021: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:17:54.185: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 20:17:56.179: Failed to load module "appmenu-gtk-module"
+1611105476291	Marionette	INFO	Listening on port 35883
+1611105476414	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611105479780	Marionette	INFO	Stopped listening on port 35883
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.error: services.settings: 
+  main/whats-new-panel Signature failed  TypeError: NetworkError when attempting to fetch resource.

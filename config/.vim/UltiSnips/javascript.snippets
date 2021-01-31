@@ -1,0 +1,91 @@
+
+snippet clg "console.log()" b
+console.log('$1');
+endsnippet
+
+snippet clo "console.log('arg', arg)" b
+console.log('$1', $1);
+endsnippet
+
+snippet try "Try Catch" b
+try{
+    $1
+}
+catch (error) {
+
+}
+endsnippet
+
+
+snippet forLoop "For Loop" b
+for (let i = 0; i< $1; i++){
+    $2
+}
+endsnippet
+
+snippet whileLoop "While Loop" b
+let i = 0
+while(i<$1){
+    $2
+    i++
+}
+endsnippet
+
+snippet useE "useEffect()" b
+useEffect(()=>{
+    $1
+}, [])
+endsnippet
+
+snippet imp "import from ''" b
+import ${2:{ $3 }} from '$1';
+endsnippet
+
+snippet fn "() => {}" i
+const $1 = ${2:($3)} => ${4:{
+   $5
+}};
+endsnippet
+
+snippet afn "() => {}" i
+${2:($3)} => ${4:{
+   $5
+}}
+endsnippet
+
+snippet cf "() {}" b
+$1 ($2) {
+   $3
+}
+endsnippet
+
+snippet co "const = " b
+const $1 = $2
+endsnippet
+
+snippet obj "= {}" b
+const $1 = {
+   $2
+}
+endsnippet
+
+snippet arr "= []" b
+const $1 = [
+   $2
+]
+endsnippet
+
+snippet des "const {} =" b
+const { $1 } = $2
+endsnippet
+
+
+snippet rfc "React function component" b
+import React from 'react'
+
+const $1 = (props) => (
+<></>
+)
+
+export default $1
+endsnippet

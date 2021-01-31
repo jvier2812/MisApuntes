@@ -1,0 +1,13 @@
+{
+    "name": "",
+    "version": "1.0.0",
+    "description": "xdxd",
+    "main": "index.js",
+    "scripts": {
+	"start": "nodemon --exec babel-node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "licence": "ISC"
+}
+

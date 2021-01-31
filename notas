@@ -1,0 +1,10 @@
+Otras notas para este update del home:
+
+[x] La línea de "Opiniones" debe llamarse "Respuestas", evaluar si se debe mostrar "Rptas"
+[x] La línea de "Respuestas" (Ex Opiniones) debe se de color #fcc757 (amarillo)
+[x] La línea de "Respuestas" debe tener 100 de opacidad (Li. 92 "opacity: [0.4, 1]")
+[x] La línea de "Respuestas" debe tener angulos (Li. 119 "curve: ['smooth', 'straight']")
+[x] La escala de la línea de "Respuestas" no debe mostrarse (Li. 169 "show: false,")
+[x] Los markers de la línea de "Respuestas" deben tener esta config.
+(Li. 194 "size: [0, 4], strokeWidth: 1, showNullDataPoints: false, hover: { sizeOffset: 1 }" )
+
