@@ -6,6 +6,9 @@ alias la='ls -A'
 alias l='ls -CF'
 alias v='nvim'
 
+alias ns='npm start'
+
+
 #quadrant
 alias qweb='cd ~/Workspace/quadrantweb'
 alias qws='cd ~/Workspace/quadrantws'

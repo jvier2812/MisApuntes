@@ -1,9 +1,16 @@
+"echo "(>^.^<)"
+
 set number  "show line numbers
 set noswapfile "disable the swap files
 set ignorecase "ignorecase in search
 set incsearch "show search result as you tipe
-set hlsearch "highligth all results
+set nohlsearch "highligth all results
 set mouse=a "gaa
+
+"some coc server have issues with backup
+set nobackup
+set nowritebackup
+set updatetime=300
 
 set showcmd
 set ruler
@@ -12,20 +19,18 @@ set showmatch
 set sw=4
 set relativenumber
 set noshowmode
-
-
 so ~/.vim/maps.vim
 so ~/.vim/plugins.vim
 
-"configurando la extension
-if (has("termguicolors"))
- set termguicolors
-endif
+set termguicolors
+"colorscheme nord
 colorscheme dracula
+"colorscheme gruvbox
+let g:gruvbox_contrast_dark="hard"
 syntax enable
 
 let g:NERDTreeQuitOnOpen=1
-let g:NERDTreeShowHidden = 1
+let g:NERDTreeShowHidden = 1 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
@@ -37,16 +42,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&  b:NERDTree.is
 set foldmethod=syntax "syntax highlighting items specify folds
 set foldcolumn=1 "defines 1 col at window left, to indicate folding
 let javaScript_fold=1 "activate folding by JS syntax
-set foldlevelstart=99 "start file with all folds opened
+set foldlevelstart=0 "start file with all folds opened
 
 
-"fzf preview
+"fzf preview ops, <c-p> to show/hide preview
 let g:fzf_preview_window = ['right:50%', 'ctrl-p']
 
 
-let g:lightline = {
-   \ 'colorscheme': 'jellybeans',
-   \ }
+let g:lightline = { 'colorscheme': 'jellybeans' }
 
  
 let g:fzf_action = {
@@ -58,13 +61,12 @@ let g:fzf_action = {
 "requires silversearcher-ag
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-
+"open new split panes to right and below
 set splitright
 set splitbelow
 tnoremap <Esc> <C-\><C-n>
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 function! OpenTerminal()
-   split term://powershell
-   resize 10
+    split term://bash
+    resize 10
 endfunction
-nnoremap <Leader>n :call OpenTerminal()<CR>

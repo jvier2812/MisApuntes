@@ -1,6 +1,7 @@
 let mapleader=" "
 
 nnoremap <Leader>n :call OpenTerminal()<CR>
+nnoremap <Leader>ww :e ~/Workspace/notes/index.md<CR>
 
 " plugs
 map <Leader>nt :NERDTreeFind<CR>
@@ -22,9 +23,9 @@ nnoremap <Leader>x :!node %<cr>
 nnoremap <Leader>ns :!npm start<cr>
 "goto code navigation
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
 
 " use alt+hjkl
 tnoremap <A-h> <C-\><C-n><C-w>h

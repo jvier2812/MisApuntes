@@ -9,13 +9,14 @@ sudo apt update && sudo apt upgrade
 #### IMPRESCINDIBLES
 
 ```bash
-sudo apt install
-    git git-flow
-    zsh font-powerline
-    neovim nodejs npm
-    neofetch
-    python3 python3-pip
-    mongodb
+sudo apt install git zsh neovim neofetch silversearcher-ag
+sudo apt install python3 python3-pip mongodb 
+sudo apt install nodejs npm # if you dont prefer nvm
+```
+##### if NVM 
+https://github.com/nvm-sh/nvm
+```
+nvm install node #require nvm
 ```
 
 ##### IF POP_OS

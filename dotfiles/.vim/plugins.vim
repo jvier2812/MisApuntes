@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 "themes
 Plug 'dracula/vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'kjwon15/vim-transparent'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
